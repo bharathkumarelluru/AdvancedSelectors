@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Registration Form</title>
+	<link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+    <h1>Course Registration Form</h1>
+    <form action>
+      <fieldset>
+        <legend>Personal Details</legend>
+        <table>
+          <tr>
+            <td><label for="fn">First Name*</label></td>
+            <td>
+              <input
+                type="text"
+                name="FN"
+                id="fn"
+                placeholder="Ex: BHARATH"
+                required
+              />
+              <p>Enter your first name</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="ln">Surname</label></td>
+            <td>
+              <input type="text" name="LN" id="ln" placeholder="Ex: E" />
+              <p>Enter your surname (optional)</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="mob">Mobile Number*</label></td>
+            <td>
+              <input
+                type="tel"
+                name="mob"
+                id="mob"
+                placeholder="Ex: 987-897-0987"
+                required
+              />
+              <p>Enter your 10-digit mobile number</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="mail">Email*</label></td>
+            <td>
+              <input
+                type="email"
+                name="mail"
+                id="mail"
+                placeholder="Ex: bharath@gmail.com"
+                required
+              />
+              <p>Enter a valid email address</p>
+              <img
+                class="valid"
+                src="https://cdn-icons-png.flaticon.com/128/9671/9671968.png"
+                alt="Valid"
+              />
+              <img
+                class="invalid"
+                src="https://cdn-icons-png.flaticon.com/128/4302/4302064.png"
+                alt="Invalid"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="pwd">Password*</label></td>
+            <td>
+              <input
+                type="password"
+                name="pwd"
+                id="pwd"
+                placeholder="Min 8 characters"
+                minlength="8"
+                required
+              />
+              <p>Include 1 uppercase, 1 lowercase, 1 special character</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="cpwd">Confirm Password*</label></td>
+            <td>
+              <input
+                type="password"
+                name="cpwd"
+                id="cpwd"
+                placeholder="Re-enter password"
+                minlength="8"
+                required
+              />
+              <p>Must match password above</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="dob">Date of Birth*</label></td>
+            <td>
+              <input type="date" name="dob" id="dob" required />
+              <p>Select your date of birth</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="age">Age*</label></td>
+            <td>
+              <input
+                type="number"
+                name="age"
+                id="age"
+                min="18"
+                max="100"
+                placeholder="18-100"
+                required
+              />
+
+              <p>Age must be between 18 and 100</p>
+              <img
+                class="valid"
+                src="https://cdn-icons-png.flaticon.com/128/9671/9671968.png"
+                alt="Valid"
+              />
+              <img
+                class="invalid"
+                src="https://cdn-icons-png.flaticon.com/128/4302/4302064.png"
+                alt="Invalid"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label>Gender*</label></td>
+            <td>
+              <input type="radio" name="gender" id="male" value="M" required />
+              <label for="male">Male</label>
+              <input type="radio" name="gender" id="female" value="F" />
+              <label for="female">Female</label>
+              <input type="radio" name="gender" id="others" value="C" />
+              <label for="others">Others</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="country">Select Country*</label></td>
+            <td>
+              <select name="Country" id="country" required>
+                <option value="">-- Select --</option>
+                <option value="INDIA">India</option>
+                <option value="USA">USA</option>
+                <option value="China">China</option>
+              </select>
+              <p>Choose your country</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="pic">Upload Picture</label></td>
+            <td>
+              <input type="file" name="pic" id="pic" />
+              <p>Upload a profile picture (optional)</p>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Course Details</legend>
+        <table>
+          <tr>
+            <td><label for="course">Select Course*</label></td>
+            <td>
+              <select name="Course" id="course" required>
+                <option value="">-- Select --</option>
+                <option value="PFS">Python Full Stack</option>
+                <option value="JFS">Java Full Stack</option>
+                <option value="CJ">Core Java</option>
+                <option value="PDS">Python for Data Science</option>
+              </select>
+              <p>Choose the course you want to enroll in</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Delivery Mode*</label></td>
+            <td>
+              <input type="radio" name="mode" id="online" value="ON" required />
+              <label for="online">Online</label>
+              <input type="radio" name="mode" id="offline" value="OFF" />
+              <label for="offline">Offline</label>
+              <p>Select your preferred learning mode</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="institute">Institute Name</label></td>
+            <td>
+              <input type="text" id="institute" value="TAP ACADEMY" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="comments">Comments</label></td>
+            <td>
+              <textarea
+                id="comments"
+                rows="4"
+                placeholder="Any additional comments or questions..."
+              ></textarea>
+              <p>Share any additional information (optional)</p>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br />
+      <input type="reset" value="Clear Form" />
+      <input type="submit" value="Submit Registration" />
+    </form>
+  </body>
+</html>
